@@ -6,7 +6,7 @@ Note that blocking is simple check if mouse position is inside of panel rectangl
 Firstly, copy wheelblock.js to ``content/panorama/custom_game/scripts/``  
 Include it in your ``custom_ui_manifest.xml``
 ```html
-<include src="file://{resources}/scripts/custom_game/util.js" /> 
+<include src="file://{resources}/scripts/custom_game/wheelblock.js" /> 
 ```
 If you use your own mouse filter then combine panel check with it yourself.  
 Finally, use this for every panel that needs to block mouse wheel:
