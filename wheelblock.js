@@ -1,8 +1,22 @@
 var mouseWheelBlockingPanels = [];
 
+function IsPointInRect(point, rect) {
+    x1 = rect[0][0];
+    x2 = rect[2][0];
+    y1 = rect[0][1];
+    y2 = rect[2][1];
+
+    if ((x1 <= point[0]) && (point[0] <= x2) && 
+        (y1 <= point[1]) && (point[1] <= y2)) {
+        return true;
+    } else {
+        return false
+    }
+}
+
 function BlockWheel(panel) {
     mouseWheelBlockingPanels.push(panel);
-};
+}
 
 (function(){
 	GameUI.CustomUIConfig().BlockWheel = BlockWheel;
@@ -25,7 +39,7 @@ function BlockWheel(panel) {
 
                     var rect = [[pX, pY], [pX + panel.actuallayoutwidth, pY], [pX + panel.actuallayoutwidth, pY + panel.actuallayoutheight], [pX, pY + panel.actuallayoutheight]]; //Util.isPointInRect(, [pX, pY, , ])
 
-                    if (Util.isPointInRect(GameUI.GetCursorPosition(), rect) && panel.visible && panel.enabled && panel.BCanSeeInParentScroll()) {
+                    if (IsPointInRect(GameUI.GetCursorPosition(), rect) && panel.visible && panel.enabled && panel.BCanSeeInParentScroll()) {
                         return CONSUME_EVENT;
                     }
                 } catch (err) {
