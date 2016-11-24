@@ -8,6 +8,7 @@ Include it in your ``custom_ui_manifest.xml``
 ```html
 <include src="file://{resources}/scripts/custom_game/util.js" /> 
 ```
+If you use your own mouse filter then combine panel check with it yourself.  
 Finally, use this for every panel that needs to block mouse wheel:
 ```js 
 // Root panel, be careful as usually root panel is stretched to whole screen
