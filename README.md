@@ -1,6 +1,5 @@
 # Panorama Wheel Block
-[Video](https://puu.sh/ssLrD/dc13da2ebb.mp4)
-![https://puu.sh/ssLrD/dc13da2ebb.mp4](https://puu.sh/ssYMz/abf6d9f4c5.jpg)
+[![alt text](https://puu.sh/ssZ2D/a83f8d129d.png)](https://puu.sh/ssLrD/dc13da2ebb.mp4)
 This snippet is designed for blocking mouse zoom when mouse is hovering some panel.
 Note that blocking is simple check if mouse position is inside of panel rectangle. It also checks if panel visible or not.
 
